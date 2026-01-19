@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A beautiful and interactive memory card matching game built with JavaScript">
+    <title>Memory Master - Card Matching Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="game-header">
+            <h1 class="game-title">
+                <span class="title-icon">🎴</span>
+                Memory Master
+            </h1>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-label">Moves</span>
+                    <span class="stat-value" id="moves">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Time</span>
+                    <span class="stat-value" id="timer">0:00</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Matches</span>
+                    <span class="stat-value" id="matches">0/8</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="resetBtn">
+                <span class="btn-icon">🔄</span>
+                New Game
+            </button>
+        </div>
+    </div>
+
+    <!-- Victory Modal -->
+    <div class="modal" id="victoryModal">
+        <div class="modal-content">
+            <div class="victory-animation">
+                <div class="confetti">🎉</div>
+                <div class="confetti">🎊</div>
+                <div class="confetti">✨</div>
+                <div class="confetti">🌟</div>
+                <div class="confetti">💫</div>
+            </div>
+            <h2 class="victory-title">🏆 Congratulations! 🏆</h2>
+            <p class="victory-text">You've matched all the cards!</p>
+            <div class="victory-stats">
+                <div class="victory-stat">
+                    <span class="victory-stat-value" id="finalMoves">0</span>
+                    <span class="victory-stat-label">Moves</span>
+                </div>
+                <div class="victory-stat">
+                    <span class="victory-stat-value" id="finalTime">0:00</span>
+                    <span class="victory-stat-label">Time</span>
+                </div>
+            </div>
+            <button class="btn btn-victory" id="playAgainBtn">
+                <span class="btn-icon">🎮</span>
+                Play Again
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
