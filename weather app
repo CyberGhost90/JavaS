@@ -28,7 +28,7 @@ export default function WeatherApp() {
     try {
       const coords = cities[cityName];
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&exclude=minutely,alerts&units=metric&appid=622f46ec4fa63900b5d79248fb9ee8aa`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&exclude=minutely,alerts&units=metric&appid=API KEY HERE`
       );
       
       if (!response.ok) {
